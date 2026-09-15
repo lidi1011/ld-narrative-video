@@ -28,4 +28,4 @@ npm run render
 
 固定 HyperFrames 0.8.35 与 npm lock，附原版 Noto Sans CJK SC 字体及 OFL。首次 npm ci 需要网络；渲染器可能需要首次浏览器准备。测试不使用真实凭据。Windows/Linux 代码路径已适配，但只有实际运行的系统才能标记通过；见安装说明。
 
-版权：自有代码和文档采用 [MIT License](LICENSE)，版权声明使用 narrative-video contributors；第三方资源适用各自条款，见 [第三方声明](THIRD_PARTY_NOTICES.md)。此候选包未对外发布。
+版权：自有代码和文档采用 [MIT License](LICENSE)，版权声明使用 narrative-video contributors；第三方资源适用各自条款，见 [第三方声明](THIRD_PARTY_NOTICES.md)。公开发布仓库：[ld-narrative-video](https://github.com/lidi1011/ld-narrative-video)。当前版本仍为发布候选，跨系统实测边界见上文。
