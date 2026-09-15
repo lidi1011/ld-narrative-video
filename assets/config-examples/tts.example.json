@@ -1,0 +1,28 @@
+{
+  "provider": "doubao",
+  "endpoint": "https://openspeech.bytedance.com/api/v3/tts/unidirectional",
+  "resource_id": "seed-tts-2.0",
+  "auth_mode": "api_key",
+  "token_header": "X-Api-Key",
+  "speaker": "zh_male_liufei_uranus_bigtts",
+  "uid": "narrative-video",
+  "audio_format": "pcm",
+  "output_container": "wav",
+  "pcm_channels": 1,
+  "pcm_sample_width": 2,
+  "sample_rate": 24000,
+  "timeout_seconds": 60,
+  "allow_insecure_localhost": false,
+  "voices": {
+    "male": {
+      "speaker": "zh_male_liufei_uranus_bigtts",
+      "resource_id": "seed-tts-2.0"
+    },
+    "female": {
+      "speaker": "zh_female_shuangkuaisisi_uranus_bigtts",
+      "resource_id": "seed-tts-2.0"
+    }
+  },
+  "max_text_chars": 1024,
+  "access_token_env": "NARRATIVE_VIDEO_DOUBAO_API_KEY"
+}

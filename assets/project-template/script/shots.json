@@ -1,0 +1,215 @@
+{
+  "schema_version": 1,
+  "shots": [
+    {
+      "id": "S001",
+      "start_ms": 0,
+      "end_ms": 8000,
+      "recipe_id": "comparison",
+      "purpose": "先确定观众要理解什么",
+      "hero_state": "标题和全部关键内容清晰可见",
+      "presentations": [
+        "infographic"
+      ],
+      "title": "先确定观众要理解什么",
+      "items": [
+        "想说的内容",
+        "观众的疑问"
+      ],
+      "event_ids": [
+        "E001"
+      ],
+      "beats": [
+        {
+          "event_id": "E001",
+          "at_ms": 600,
+          "item_index": 0
+        },
+        {
+          "event_id": "E001",
+          "at_ms": 1400,
+          "item_index": 1
+        }
+      ],
+      "asset_ids": []
+    },
+    {
+      "id": "S002",
+      "start_ms": 8000,
+      "end_ms": 16000,
+      "recipe_id": "steps",
+      "purpose": "把结论拆成可见的步骤",
+      "hero_state": "标题和全部关键内容清晰可见",
+      "presentations": [
+        "infographic"
+      ],
+      "title": "把结论拆成可见的步骤",
+      "items": [
+        "写清结论",
+        "安排镜头",
+        "验证理解"
+      ],
+      "event_ids": [
+        "E002"
+      ],
+      "beats": [
+        {
+          "event_id": "E002",
+          "at_ms": 8600,
+          "item_index": 0
+        },
+        {
+          "event_id": "E002",
+          "at_ms": 9400,
+          "item_index": 1
+        },
+        {
+          "event_id": "E002",
+          "at_ms": 10200,
+          "item_index": 2
+        }
+      ],
+      "asset_ids": []
+    },
+    {
+      "id": "S003",
+      "start_ms": 16000,
+      "end_ms": 24000,
+      "recipe_id": "grouping",
+      "purpose": "按意义组织画面",
+      "hero_state": "标题和全部关键内容清晰可见",
+      "presentations": [
+        "infographic"
+      ],
+      "title": "按意义组织画面",
+      "items": [
+        "信息：事实与解释",
+        "形式：图解与素材",
+        "风格：色彩与动效"
+      ],
+      "event_ids": [
+        "E003"
+      ],
+      "beats": [
+        {
+          "event_id": "E003",
+          "at_ms": 16600,
+          "item_index": 0
+        },
+        {
+          "event_id": "E003",
+          "at_ms": 17400,
+          "item_index": 1
+        },
+        {
+          "event_id": "E003",
+          "at_ms": 18200,
+          "item_index": 2
+        }
+      ],
+      "asset_ids": []
+    },
+    {
+      "id": "S004",
+      "start_ms": 24000,
+      "end_ms": 32000,
+      "recipe_id": "cause",
+      "purpose": "让动作表达因果",
+      "hero_state": "标题和全部关键内容清晰可见",
+      "presentations": [
+        "infographic"
+      ],
+      "title": "让动作表达因果",
+      "items": [
+        "出现问题",
+        "解释原因",
+        "给出行动"
+      ],
+      "event_ids": [
+        "E004"
+      ],
+      "beats": [
+        {
+          "event_id": "E004",
+          "at_ms": 24600,
+          "item_index": 0
+        },
+        {
+          "event_id": "E004",
+          "at_ms": 25400,
+          "item_index": 1
+        },
+        {
+          "event_id": "E004",
+          "at_ms": 26200,
+          "item_index": 2
+        }
+      ],
+      "asset_ids": []
+    },
+    {
+      "id": "S005",
+      "start_ms": 32000,
+      "end_ms": 40000,
+      "recipe_id": "focus",
+      "purpose": "每个镜头只强调一个重点",
+      "hero_state": "标题和全部关键内容清晰可见",
+      "presentations": [
+        "infographic"
+      ],
+      "title": "每个镜头只强调一个重点",
+      "items": [
+        "同一时刻，一个主角"
+      ],
+      "event_ids": [
+        "E005"
+      ],
+      "beats": [
+        {
+          "event_id": "E005",
+          "at_ms": 32600,
+          "item_index": 0
+        }
+      ],
+      "asset_ids": []
+    },
+    {
+      "id": "S006",
+      "start_ms": 40000,
+      "end_ms": 48000,
+      "recipe_id": "takeaway",
+      "purpose": "从样片走向完整成片",
+      "hero_state": "标题和全部关键内容清晰可见",
+      "presentations": [
+        "typography"
+      ],
+      "title": "从样片走向完整成片",
+      "items": [
+        "先看关键帧",
+        "再看短样片",
+        "最后检查全片"
+      ],
+      "event_ids": [
+        "E006"
+      ],
+      "beats": [
+        {
+          "event_id": "E006",
+          "at_ms": 40600,
+          "item_index": 0
+        },
+        {
+          "event_id": "E006",
+          "at_ms": 41400,
+          "item_index": 1
+        },
+        {
+          "event_id": "E006",
+          "at_ms": 42200,
+          "item_index": 2
+        }
+      ],
+      "asset_ids": []
+    }
+  ]
+}

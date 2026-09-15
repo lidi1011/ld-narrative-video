@@ -1,0 +1,61 @@
+# Copy to .github/workflows/portability.yml in a repository whose root is the skill bundle.
+# This is a prepared workflow, not evidence of remote CI execution.
+name: Portability
+on: [push, pull_request, workflow_dispatch]
+jobs:
+  portable:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [macos-latest, windows-latest, ubuntu-latest]
+        python: ['3.10', '3.13']
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Unit tests including localhost TTS mocks
+        run: python -m unittest discover -s tests -v
+      - name: Native launcher and portrait fixture in Unicode path
+        run: node scripts/run_python.mjs scripts/smoke_release.py "smoke 中文 spaces" --aspect-ratio 9:16
+      - name: Install locked dependencies
+        working-directory: smoke 中文 spaces/video
+        run: npm ci
+      - name: Confirm command discovery
+        working-directory: smoke 中文 spaces/video
+        run: npm run check
+      - name: Install FFmpeg on Linux
+        if: runner.os == 'Linux'
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+      - name: Install FFmpeg on macOS
+        if: runner.os == 'macOS'
+        run: brew list ffmpeg || brew install ffmpeg
+      - name: Install FFmpeg on Windows
+        if: runner.os == 'Windows'
+        run: choco install ffmpeg --yes --no-progress
+      - name: Probe browser and font on provisioned runner
+        working-directory: smoke 中文 spaces/video
+        run: npm run doctor -- --browser-check
+      - name: Capture and render
+        working-directory: smoke 中文 spaces/video
+        run: |
+          npm run storyboard
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          npm run render
+        shell: pwsh
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: evidence-${{ matrix.os }}-${{ matrix.python }}
+          path: |
+            smoke 中文 spaces/video/qc
+            smoke 中文 spaces/video/stills
+            smoke 中文 spaces/video/renders
+# Hosted runner must have Google Chrome installed. If a future image omits it,
+# doctor fails explicitly; install Chrome before claiming this matrix passed.
+# Actual visual/listening review remains separate from this workflow.
+

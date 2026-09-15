@@ -1,0 +1,4 @@
+interface:
+  display_name: "通用叙事视频"
+  short_description: "把主题、文案与素材编排成可修改的横屏或竖屏叙事视频，完成分镜、样片与检查"
+  default_prompt: "使用 $ld-narrative-video，把主题、定稿文案和素材编排成可修改的横屏或竖屏叙事视频。"

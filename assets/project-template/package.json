@@ -1,0 +1,18 @@
+{
+  "name": "narrative-video-production",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "hyperframes preview .",
+    "check": "hyperframes check .",
+    "render": "node tools/run_python.mjs tools/render_project.py --project-root .",
+    "storyboard": "node tools/run_python.mjs tools/build_storyboard.py --project-root . --capture",
+    "doctor": "node tools/run_python.mjs tools/doctor.py --project-root ."
+  },
+  "devDependencies": {
+    "hyperframes": "0.8.35"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
